@@ -1,0 +1,34 @@
+{
+  "name": "gm-react-use-form",
+  "version": "0.1.0",
+  "description": "form",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "files": ["lib/**/*"],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gmogithub/gm-react-use-form.git"
+  },
+  "keywords": [
+    "form",
+    "react"
+  ],
+  "author": "GM",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gmogithub/gm-react-use-form/issues"
+  },
+  "homepage": "https://github.com/gmogithub/gm-react-use-form#readme",
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "18.2.0",
+    "typescript": "^5.0.4"
+  }
+}
