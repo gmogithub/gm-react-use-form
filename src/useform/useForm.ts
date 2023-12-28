@@ -9,7 +9,7 @@ export interface UseFormRegisterReturn {
   value?: any,
   onChange: UseFormChangeEvent,
   onBlur: UseFormBlurEvent,
-  // ref: any,
+  ref: (elt: any) => void,
   error?: string,
   checked?: boolean
 }
@@ -20,7 +20,7 @@ export interface UseFormRegisterDateReturn {
   onChange: UseFormChangeEvent,
   onBlur: UseFormBlurEvent,
   error?: string,
-  // ref: React.LegacyRef<HTMLElement>,
+  ref: (elt: any) => void,
 }
 
 export interface UseFormValidator {
@@ -347,7 +347,7 @@ export function useForm<FormValues extends UseFormValues = any>(optionProp?: Use
       error,
       onChange: handleChange,
       onBlur: handleBlur,
-      // ref: (elt: HTMLElement) => formInfoRef.current.eltRefs[name] = elt
+      ref: (elt: HTMLElement) => formInfoRef.current.eltRefs[name] = elt
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [errors, state.formatValues, state.parseValues]);
@@ -372,7 +372,7 @@ export function useForm<FormValues extends UseFormValues = any>(optionProp?: Use
       error: errors[name],
       onChange: handleChange,
       onBlur: handleBlur,
-      // ref: (elt: HTMLElement) => formInfoRef.current.eltRefs[name] = elt
+      ref: (elt: HTMLElement) => formInfoRef.current.eltRefs[name] = elt
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [errors, state.formatValues, state.parseValues]);
@@ -397,7 +397,7 @@ export function useForm<FormValues extends UseFormValues = any>(optionProp?: Use
       onChange: handleChange,
       onBlur: handleBlur,
       checked: valueState,
-      // ref: (elt: HTMLElement) => formInfoRef.current.eltRefs[name] = elt
+      ref: (elt: HTMLElement) => formInfoRef.current.eltRefs[name] = elt
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [errors, state.formatValues, state.parseValues]);
@@ -421,7 +421,7 @@ export function useForm<FormValues extends UseFormValues = any>(optionProp?: Use
       error: errors[name],
       onChange: handleChange,
       onBlur: handleBlur,
-      // ref: (elt: HTMLElement) => formInfoRef.current.eltRefs[name] = elt
+      ref: (elt: HTMLElement) => formInfoRef.current.eltRefs[name] = elt
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [errors, formatValues, parseValues]);
@@ -443,7 +443,7 @@ export function useForm<FormValues extends UseFormValues = any>(optionProp?: Use
       onChange: handleChange,
       onBlur: handleBlur,
       error: errors[name],
-      // ref: (elt: HTMLElement) => formInfoRef.current.eltRefs[name] = elt
+      ref: (elt: HTMLElement) => formInfoRef.current.eltRefs[name] = elt
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [errors, state.formatValues])
